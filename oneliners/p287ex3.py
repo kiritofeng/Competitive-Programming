@@ -1,1 +1,1 @@
-print("%.4f\n"%max([float(input()) for _ in range(int(input()))]))
+print("%.2f\n"%min([float(input()) for _ in range(int(input()))]))
