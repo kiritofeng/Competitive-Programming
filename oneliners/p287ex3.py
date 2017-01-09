@@ -1,1 +1,1 @@
-print("%.2f\n"%sorted([float(input()) for _ in range(int(input()))])[0])
+print("%.24\n"%max([float(input()) for _ in range(int(input()))]))
