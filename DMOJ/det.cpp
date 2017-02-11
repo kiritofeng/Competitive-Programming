@@ -43,8 +43,9 @@ int main() {
             }
             cnt ^= 1;
         }
+        ll inv = modinv(matrix[i][i], MOD - 2);
         for(int j=i + 1;j < N;j++) {
-            ll m = matrix[j][i], inv = modinv(matrix[i][i], MOD - 2);
+            ll m = matrix[j][i];
             for(int k = i;k<N;k++)
                 matrix[j][k] = mod(matrix[j][k] - mod(mod(matrix[i][k] * inv) * m));
         }
