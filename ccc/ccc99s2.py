@@ -29,6 +29,7 @@ def cvt2(x):
     except ValueError:
         return '%s.%s.%s' % (x.group(1), x.group(2), x.group(3))
 
+
 def cvt3(x):
     global m
     try:
