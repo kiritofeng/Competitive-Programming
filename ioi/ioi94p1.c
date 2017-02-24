@@ -9,7 +9,6 @@ int dfs(int x, int y) {
     if(m[x][y] ^ -1) return m[x][y];
     if(x < N) return m[x][y] = max(dfs(x + 1, y), dfs(x + 1, y + 1)) + t[x][y];
     return 0;
-
 }
 
 int main() {
