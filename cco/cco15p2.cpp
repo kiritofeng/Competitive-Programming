@@ -23,14 +23,13 @@ int clear_bit(int mask, int ind) {
 }
 
 ll dp(int src, int vis) {
-    if(memo[src][vis] ^ -1) return memo[src][vis];
+    if(memo[src][vis] != -1) return memo[src][vis];
     if(src == N - 1) return memo[src][vis] = 0;
-    vis = set_bit(vis, src);
     int tmp = memo[src][vis] = -INF;
     for(int i=0;i<N;i++)
-        if(adj[src][i] ^ -1  && !check_bit(vis, i)) {
+        if(adj[src][i] != -1 && src ^ i && !check_bit(vis, i)) {
             tmp = dp(i, set_bit(vis, i));
-            if(tmp ^ -INF)
+            if(tmp != -INF)
                 memo[src][vis] = max(memo[src][vis], tmp + adj[src][i]);
         }
     return memo[src][vis];
@@ -44,5 +43,5 @@ int main() {
         scanf("%lld%lld%lld", &a, &b, &c);
         adj[a][b] = max(adj[a][b], c);
     }
-    printf("%lld", dp(0, 0));
+    printf("%lld", dp(0, 1));
 }
