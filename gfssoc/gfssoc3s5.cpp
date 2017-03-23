@@ -13,7 +13,7 @@ const int MAXN = 100004;
 int N, Q, A[MAXN];
 
 struct seg {
-    int l, r, v[8];
+    int l, r, v[4];
     /**
      * v[0] is left
      * v[1] is right
