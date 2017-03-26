@@ -28,7 +28,6 @@ int main() {
     for(int i=0, b, c;i<Q;i++) {
         char a;
         cin >> a;
-        //cerr << a;
         if (a == 'Q') {
             cin >> b;
             if(!s[b].empty())
