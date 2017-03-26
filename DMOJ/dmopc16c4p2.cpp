@@ -20,7 +20,6 @@ int main() {
     scanf("%d", &B);
     for(int i=0, f, e, p;i<B;i++) {
         scanf("%d%d%d", &f, &e, &p);
-        assert(f&&e);
         batches += {f, e, p};
     }
     scanf("%d", &F);
