@@ -4,7 +4,7 @@ using namespace std;
 
 typedef long long ll;
 
-const int IT = 10, MAXN = 2000004, seed = 131, mod = 1000000009;
+const int IT = 10, MAXN = 1000004, seed = 131, mod = 1000000009;
 ll h[2][MAXN], p[MAXN] = {1};
 char S[MAXN];
 
