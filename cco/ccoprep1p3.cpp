@@ -97,5 +97,3 @@ int main() {
             merge(a, b);
     }
 }
-
-
