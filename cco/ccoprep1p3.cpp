@@ -6,11 +6,7 @@ struct node {
     int val, stu, sz, p;
     node* l, *r;
 
-    node(int i, int j) : val(i), stu(j), sz(1), p(rand()){l = r = 0;}
-
-    ~node(){
-        free(l), free(r);
-    }
+    node(int i, int j) : val(i), stu(j), sz(1), p(rand()), l(0), r(0){}
 };
 
 int sz(node * n) {
@@ -19,13 +15,6 @@ int sz(node * n) {
 
 void upd_sz(node* &n) {
     if(n) n -> sz = sz(n -> l) + 1 + sz(n -> r);
-}
-
-void merge(node* &n, node *l, node *r) {
-    if(!l || !r) n = l ? l : r;
-    else if(l->p>r->p) merge(l->r, l->r, r), n = l;
-    else merge(r->l, l, r->l), n = r;
-    upd_sz(n);
 }
 
 void split(node* n, node* &l, node* &r, int key) {
