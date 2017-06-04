@@ -3,7 +3,6 @@
 using namespace std;
 
 int W, H, N, M, G[252][252];
-vector<int>F;
 int main() {
     scanf("%d %d %d", &W, &H, &N);
     for(int i=1;i<=H;i++) {
@@ -21,7 +20,6 @@ int main() {
             for(int k=1;k<=W;k++) {
                 int a=min(i+k, W), b = min(j+N/k, H);
                 M=max(M, G[a][b]-G[a][j]-G[i][b]+G[i][j]);
-                if(DEBUG) printf("%d %d %d %d %d\n", i+1, j+1, a, b, G[a][b]-G[a][j]-G[i][b]+G[i][j]);
             }
         }
     }
