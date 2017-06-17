@@ -1,3 +1,12 @@
+/**
+ * A Random Meldable Heap is a Randomized Min Heap
+ * This heap supports the following operations:
+ * Meld: Merge two heaps together if O(log N) time
+ * Insert: Insert an element in O(log N) time
+ * Pop: Remove the minimum element in O(log N) time
+ * Top: Return the minimum element in O(1) time
+ */
+
 #include <bits/stdc++.h>
 
 using namespace std;
