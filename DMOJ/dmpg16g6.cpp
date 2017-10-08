@@ -45,7 +45,6 @@ int main() {
                 tmp=bf(A[j],l,j);
                 ans=((ans+2LL*tmp-1)%mod+mod)%mod;
             }
-            //Watch for last block
         } else {
             for(int j=l,tmp;j<=r;++j) {
                 tmp=bf(A[j],l,j);
