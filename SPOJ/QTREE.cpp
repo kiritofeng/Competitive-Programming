@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-typedef pair<int,int>pii;
 const int MAXN = 100004;
 struct edge {
     int des,dis,id;
@@ -9,7 +8,6 @@ struct edge {
     }
 };
 int N, T, cnt, top[MAXN], cst[MAXN], par[MAXN], depth[MAXN], heavy[MAXN], sz[MAXN], ei[MAXN], id[MAXN], st[MAXN<<1];
-pii E[MAXN];
 char S[16];
 vector<edge>adj[MAXN];
 void update(int pos,int val) {
