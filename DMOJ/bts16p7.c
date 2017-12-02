@@ -1,15 +1,16 @@
-#include <bits/stdc++.h>
-typedef long long ll;
-const int MAXSZ = 200004, MAXP = 24;
+#include <stdio.h>
+#define ll long long
+#define MAXSZ 200004
+#define MAXP 24
 int P,Q,N,X,pw[MAXP],rating[MAXP];
 ll psa[MAXSZ];
-int get_ind() {
+inline int get_ind() {
     int ind=0;
     for(int i=P-1;i>=0;--i)
         ind+=pw[i]*(Q-rating[i]-1);
     return ind;
 }
-void sum() {
+inline void sum() {
     for(int i=0;i<P;++i) {
         //Sum dimension i
         for(int j=pw[i];j<MAXSZ;++j) {
