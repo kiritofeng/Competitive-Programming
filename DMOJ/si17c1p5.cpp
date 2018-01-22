@@ -20,7 +20,7 @@ struct matrix{
     inline void operator*=(matrix m){
         *this=(*this)*m;
     }
-};
+}m;
 inline matrix pow(matrix m,ll e){
     matrix res=matrix();
     while(e){
@@ -31,7 +31,6 @@ inline matrix pow(matrix m,ll e){
     return res;
 }
 ll N,init[2],res[2];
-matrix m;
 int main(){
     scanf("%lld%lld%lld",&init[0],&init[1],&N);
     m=matrix(0,1,1,1);
@@ -41,4 +40,3 @@ int main(){
             res[i]=(res[i]+m[i][k]*init[k])%MOD;
     printf("%lld",res[0]);
 }
-
