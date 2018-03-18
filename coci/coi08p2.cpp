@@ -58,7 +58,7 @@ inline nd* access(nd *u){
     nd *tmp=0;
     for(nd *v=u;v;v=v->p){
         splay(v);
-        v->ch[1]=tmp;
+        v->ch[0]=tmp;
         tmp=v;
     }
     splay(u);
