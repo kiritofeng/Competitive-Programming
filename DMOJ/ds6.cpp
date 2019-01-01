@@ -85,15 +85,6 @@ inline void splay(nd *n){
     psh(n);
     upd(n);
 }
-// reveal the node to me
-inline void debug(nd *n) {
-    printf("id: %d\n",n?n->id:-1);
-    printf("val: %d\n", n?n->val:0);
-    printf("sum: %d\n", n?n->sum:0);
-    printf("mx: %d\n", n?n->mx:0);
-    printf("mn: %d\n", n?n->mn:0);
-    printf("sz: %d\n", n?n->sz:0);
-}
 inline nd *access(nd *u) {
     nd *l = 0;
     for(nd *v=u;v;v=v->p) {
@@ -140,19 +131,6 @@ int main() {
         scanf("%d%d",&a,&b);
         lnk(lct[a],lct[b]);
     }
-    /*
-    for(int i=1;i<=N;++i) {
-        puts("------");
-        debug(lct[i]);
-        puts("LEFT");
-        debug(lct[i]->ch[0]);
-        puts("RIGHT");
-        debug(lct[i]->ch[1]);
-        puts("PARENT");
-        debug(lct[i]->p);
-        puts("------");
-    }
-    */
     scanf("%d",&R);
     evert(lct[R]);
     for(int i=0,a,b,c,d;i<M;++i){
