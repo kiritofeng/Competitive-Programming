@@ -109,9 +109,6 @@ ll Query(int S, int X[], int T, int Y[]) {
         add_vedge(stk[stk[0] - 1], stk[stk[0]]);
         --stk[0];
     }
-    #ifdef DEBUG
-        print_vtree();
-    #endif
     dfs3(F[0],-1);
     for(int i : to_clear) {
         vadj[i].clear();
